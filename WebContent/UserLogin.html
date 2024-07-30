@@ -70,7 +70,7 @@ input {
 	<header>
 		<nav class="navbar navbar-expand-sm bg-dark">
 				<a class="navbar-brand">
-					<!-- The below line can be an image or a h1, either will work -->
+					
 					<img src="logo.png" alt="Google logo" width="60" height="30px">
 				</a>
 				
@@ -131,7 +131,7 @@ input {
 	<script type="text/javascript">
 
 
-		// Preloder script
+		
 		var tmp = document.getElementById("loding");
 		function funload() {
 		  loding.style.display = "none";
@@ -139,7 +139,7 @@ input {
 	  
   
 
-		// Captcha Script
+		
 
 		function checkform() {
 			var theform = document.getElementById("theform");
@@ -171,7 +171,7 @@ input {
 		document.getElementById("txtCaptcha").value = code;
 		document.getElementById("CaptchaDiv").innerHTML = code;
 
-		// Validate input against the generated number
+		
 		function ValidCaptcha() {
 			var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
 			var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
@@ -182,7 +182,7 @@ input {
 			}
 		}
 
-		// Remove the spaces from the entered and generated code
+		
 		function removeSpaces(string) {
 			return string.split(' ').join('');
 		}
