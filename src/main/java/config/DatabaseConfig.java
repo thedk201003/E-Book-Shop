@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 class DatabaseConfig {
+
     static Properties prop = new Properties();
     static {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -29,5 +30,4 @@ class DatabaseConfig {
     private static String getEnvOrProperty(String key) {
         return System.getenv().getOrDefault(key.toUpperCase().replace(".", "_"), prop.getProperty(key));
     }
-
 }
