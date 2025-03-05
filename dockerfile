@@ -19,8 +19,8 @@ ENV CATALINA_HOME /usr/local/tomcat
 # Remove default Tomcat webapps
 RUN rm -rf $CATALINA_HOME/webapps/*
 
-# Copy WAR file from builder stage to Tomcat webapps directory
-COPY --from=builder /app/target/onlinebookstore.war $CATALINA_HOME/webapps/onlinebookstore.war
+# Rename the WAR file to ROOT.war and copy it to Tomcat's webapps directory
+COPY --from=builder /app/target/onlinebookstore.war $CATALINA_HOME/webapps/ROOT.war
 
 # Expose port 8080
 EXPOSE 8080
